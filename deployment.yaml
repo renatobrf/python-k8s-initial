@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-k8s-initial
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-k8s-initial
+  template:
+    metadata:
+      labels:
+        app: python-k8s-initial
+    spec:
+      containers:
+      - name: python-k8s-initial
+        image: renatobrf/python-k8s-initial
+        imagePullPolicy: Always
