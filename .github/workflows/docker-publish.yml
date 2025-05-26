@@ -1,4 +1,4 @@
-name: Docker
+name: python-k8s-initial
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
