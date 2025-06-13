@@ -1,4 +1,11 @@
-# python-k8s-initial
+# required files
+- build.yaml
+- .secrets.baseline
+- deploy/env/application.yaml
+- Java - pom.xml, server.xml
+- Python - app.py, requirements.txt, pyproject.toml
+- Go - main.go, go.mod, go.sum, Makefile, e2e.sh, goproject.yaml
+- Node - package.json, scripts, unit-test, lint, e2e, start, compile
 
 ## build and push
 - docker build -t renatobrf/python-k8s-initial .
