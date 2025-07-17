@@ -14,5 +14,7 @@ spec:
     spec:
       containers:
       - name: python-k8s-initial
-        image: renatobrf/python-k8s-initial
+        image: renatobrf/python-k8s-initial:0.1
         imagePullPolicy: Always
+        ports:
+        - containerPort: 40501
