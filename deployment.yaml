@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: python-k8s-initial
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: python-k8s-initial
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: python-k8s-initial
-        image: renatobrf/python-k8s-initial:0.1
+        image: renatobrf/python-k8s-initial
         imagePullPolicy: Always
         ports:
         - containerPort: 40501
