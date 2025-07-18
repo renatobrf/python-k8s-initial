@@ -17,3 +17,4 @@
 ## check the logs
 - kubectl get pods
 - kubectl logs <pod-name>
+- kubectl label namespace default env=nonprod --overwrite
