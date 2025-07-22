@@ -18,5 +18,12 @@
 ## check the logs
 - kubectl get pods
 - kubectl logs <pod-name>
+- kubectl describe pod <pod-name>
 - kubectl label namespace default env=nonprod --overwrite
-- kubectl describe pod python-k8s-initial-68c4f5fffb-rm22w
+
+## steps
+- kubectl create namespace nome
+- sudo snap install helm
+- deploy 2 monitor operator and donwload de agent image
+
+## kubectl main commands
