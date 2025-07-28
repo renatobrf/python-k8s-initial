@@ -23,7 +23,5 @@
 
 ## steps
 - kubectl create namespace nome
-- sudo snap install helm
+- sudo snap install helm --classic
 - deploy 2 monitor operator and donwload de agent image
-
-## kubectl main commands
