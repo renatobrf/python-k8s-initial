@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-tabela = pd.read_csv('data/vendas.csv')
+tabela = pd.read_excel('data/vendas.xlsx')
 
 st.title('Análise de Vendas')
 
