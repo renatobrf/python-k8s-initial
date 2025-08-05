@@ -16,5 +16,10 @@ spec:
       - name: python-k8s-initial
         image: renatobrf/python-k8s-initial
         imagePullPolicy: Always
-        ports:
-        - containerPort: 40501
+        volumeMounts:
+            - name: persistent-storage
+              mountPath: /usr/share/nginx/html
+      volumes:
+      - name: persistent-storage
+        persistentVolumeClaim:
+          claimName: my-pvc
