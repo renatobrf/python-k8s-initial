@@ -20,7 +20,7 @@ spec:
         imagePullPolicy: Always
         volumeMounts:
             - name: persistent-storage
-              mountPath: /usr/share/nginx/html
+              mountPath: /usr/share/python-k8s-initial
       volumes:
       - name: persistent-storage
         persistentVolumeClaim:
