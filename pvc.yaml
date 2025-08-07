@@ -8,4 +8,5 @@
       resources:
         requests:
           storage: 1Gi
+        volumeName: my-pv  
       # storageClassName: my-storage-class # Optional, if using dynamic provisioning
