@@ -4,6 +4,12 @@ metadata:
   name: python-k8s-initial
   labels:
     app: python
+    application: python-k8s-initial
+  annotations:
+    application-name: "python-k8s-initial"
+    buildpacks: python_buildpack
+  env:
+    AUTOWRAPT_BOOTSTRAP: instana
 spec:
   replicas: 2
   selector:
@@ -13,14 +19,17 @@ spec:
     metadata:
       labels:
         app: python-k8s-initial
+        application: python-k8s-initial
+      annotations:
+        application-name: "python-k8s-initial"
     spec:
       containers:
       - name: python-k8s-initial
         image: renatobrf/python-k8s-initial
         imagePullPolicy: Always
         volumeMounts:
-            - name: persistent-storage
-              mountPath: /usr/share/python-k8s-initial
+          - name: persistent-storage
+            mountPath: /usr/share/python-k8s-initial
       volumes:
       - name: persistent-storage
         persistentVolumeClaim:
