@@ -8,10 +8,8 @@ metadata:
   annotations:
     application-name: "python-k8s-initial"
     buildpacks: python_buildpack
-  env:
-    AUTOWRAPT_BOOTSTRAP: instana
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: python-k8s-initial
@@ -27,6 +25,11 @@ spec:
       - name: python-k8s-initial
         image: renatobrf/python-k8s-initial
         imagePullPolicy: Always
+        env:
+          - name: AUTOWRAPT_BOOTSTRAP
+            value: "instana"
+          - name: TZ
+            value: "America/Sao_Paulo"
         volumeMounts:
           - name: persistent-storage
             mountPath: /usr/share/python-k8s-initial
